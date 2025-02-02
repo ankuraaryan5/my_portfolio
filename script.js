@@ -21,7 +21,7 @@ document.getElementById("btn1").addEventListener("click", function () {
     },
     {
       title: "Aspiring Software Developer",
-      company: "Self-Employed",
+      company: "",
       duration: "June 2024 - Present",
       description: "Developed and deployed multiple projects, including CricMate and Janjagran Manch (a client project), focusing on real-time data and UI/UX improvements.",
     },
@@ -47,10 +47,11 @@ document.getElementById("btn1").addEventListener("click", function () {
         </div>
   
         <!-- Circle Indicator -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
+        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
       </div>
     `;
   
     experienceList.innerHTML += experienceItem;
   });
+  
   
