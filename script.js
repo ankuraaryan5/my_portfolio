@@ -26,8 +26,6 @@ document.getElementById("btn1").addEventListener("click", function () {
       description: "Developed and deployed multiple projects, including CricMate and Janjagran Manch (a client project), focusing on real-time data and UI/UX improvements.",
     },
   ];
-  
-  // Reverse experiences to display newest first
   const reversedExperiences = [...experiences].reverse();
   
   const experienceList = document.getElementById("experience-list");
@@ -54,4 +52,22 @@ document.getElementById("btn1").addEventListener("click", function () {
     experienceList.innerHTML += experienceItem;
   });
   
-  
+  const jokeButton = document.getElementById("jokeButton");
+  const jokeText = document.getElementById("jokeText");
+  async function fetchJoke() {
+    try {
+      const response = await fetch("https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun?blacklistFlags=religious&type=twopart");
+      const data = await response.json();
+      
+      if (data.setup && data.delivery) {
+        jokeText.textContent = `${data.setup} ${data.delivery}`;
+        jokeButton.disabled = true;
+        jokeButton.textContent = "Hope you haha'd! 😉";
+      } else {
+        jokeText.textContent = "Oops! Couldn't fetch a joke right now. Please try again!";
+      }
+    } catch (error) {
+      jokeText.textContent = "Something went wrong. Please try again!";
+    }
+  }
+  jokeButton.addEventListener("click", fetchJoke);
