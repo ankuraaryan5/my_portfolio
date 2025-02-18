@@ -20,10 +20,16 @@ document.getElementById("btn1").addEventListener("click", function () {
       description: "Worked on full-stack projects using MERN stack, optimized React components, and improved API performance.",
     },
     {
-      title: "Aspiring Software Developer",
+      title: "Freelance Developer",
       company: "",
-      duration: "June 2024 - Present",
+      duration: "June 2024 - February 2025",
       description: "Developed and deployed multiple projects, including CricMate and Janjagran Manch (a client project), focusing on real-time data and UI/UX improvements.",
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Adonomics Technologies Pvt Ltd",
+      duration: "February 2025 - Present",
+      description: "Joined as Full Stack Developer (currently on probation) working on MERN Stack Projects",
     },
   ];
   const reversedExperiences = [...experiences].reverse();
