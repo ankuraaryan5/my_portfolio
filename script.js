@@ -29,7 +29,7 @@ document.getElementById("btn1").addEventListener("click", function () {
       title: "Full Stack Developer",
       company: "Adonomics Technologies Pvt Ltd",
       duration: "February 2025 - Present",
-      description: "Joined as Full Stack Developer (currently on probation) working on MERN Stack Projects",
+      description: "Joined as Full Stack Developer working on MERN Stack Projects",
     },
   ];
   const reversedExperiences = [...experiences].reverse();
